@@ -52,7 +52,7 @@ public class Main {
                 onSongRepeat = false;
             }
         }
-            System.out.println("Next song is playing");*/
+            System.out.println("Next song is playing");
 
         String question = "What is the java code to print something in the screen?";
         String choiceOne = "system.in";
@@ -69,15 +69,31 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         String answer = scanner.next();
 
-        if(correctAnswer.equals(answer)){
-            System.out.println("Congratulation! Your answer is correct.");
-        }else{
+        if (correctAnswer.equals(answer)) {
             System.out.println("Good luck next time! Your answer is wrong.");
+        } else {
+            System.out.println("Congratulation! Your answer is correct.");
+        }*/
+        System.out.println("Let's calculate the area of a triangle");
+
+        Scanner input = new Scanner(System.in);
+
+        System.out.println("Please input the base of the triangle (in inches).");
+        double base = input.nextDouble();
+
+        while(base <= 0){
+            System.out.println("That's invalid. Please input the base of the triangle (in inches");
+            base = input.nextDouble();
         }
 
-
-
-
+        System.out.println("Please input the height of the triangle (in inches).");
+        double height = input.nextDouble();
+        while(height <= 0){
+            System.out.println("That's invalid. Please input the height of the triangle (in inches)");
+            height = input.nextDouble();
+        }
+        double area = (base * height) / 2;
+        System.out.println("The area is: " + area);
 
     }
 }
