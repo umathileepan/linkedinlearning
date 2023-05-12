@@ -4,7 +4,10 @@ import static java.lang.System.in;
 import java.util.Scanner;
 
 public class Main {
-    public static double calculateSalary(){
+
+
+
+    /*public static double calculateSalary(){
         int maxHoursPerDay = 40;
         int noOfWeekPerYear = 52;
         System.out.println("Number of hours employee work per week: ");
@@ -17,13 +20,17 @@ public class Main {
         double vacationSalary = salaryPerHour * (numberOfVacation * maxHoursPerDay);
         double totalSalary = ((workingHoursPerWeek * salaryPerHour) * noOfWeekPerYear) - vacationSalary;
         return totalSalary;
-    }
+    }*/
     public static void main(String[] args) {
 
-        double salary = calculateSalary();
+        Triangle triangleA = new Triangle(15,8,15,8,17);
+        Triangle triangleB = new Triangle(3,2.598,3,3,3);
+
+
+       /* double salary = calculateSalary();
         System.out.println("Employee's yearly salary: " + salary);
 
-        /*System.out.println("Hello World from the IntelliJ IDE!");
+        System.out.println("Hello World from the IntelliJ IDE!");
 
         int studentAge = 15;
         double studentGPA = 3.45;
