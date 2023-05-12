@@ -4,7 +4,25 @@ import static java.lang.System.in;
 import java.util.Scanner;
 
 public class Main {
+    public static double calculateSalary(){
+        int maxHoursPerDay = 40;
+        int noOfWeekPerYear = 52;
+        System.out.println("Number of hours employee work per week: ");
+        Scanner input = new Scanner(System.in);
+        int workingHoursPerWeek = input.nextInt();
+        System.out.println("Salary per hour: ");
+        double salaryPerHour = input.nextDouble();
+        System.out.println("How many days of vacation has been taken: ");
+        int numberOfVacation = input.nextInt();
+        double vacationSalary = salaryPerHour * (numberOfVacation * maxHoursPerDay);
+        double totalSalary = ((workingHoursPerWeek * salaryPerHour) * noOfWeekPerYear) - vacationSalary;
+        return totalSalary;
+    }
     public static void main(String[] args) {
+
+        double salary = calculateSalary();
+        System.out.println("Employee's yearly salary: " + salary);
+
         /*System.out.println("Hello World from the IntelliJ IDE!");
 
         int studentAge = 15;
@@ -73,7 +91,7 @@ public class Main {
             System.out.println("Good luck next time! Your answer is wrong.");
         } else {
             System.out.println("Congratulation! Your answer is correct.");
-        }*/
+        }
         System.out.println("Let's calculate the area of a triangle");
 
         Scanner input = new Scanner(System.in);
@@ -93,7 +111,9 @@ public class Main {
             height = input.nextDouble();
         }
         double area = (base * height) / 2;
-        System.out.println("The area is: " + area);
+        System.out.println("The area is: " + area);*/
+
+
 
     }
 }
