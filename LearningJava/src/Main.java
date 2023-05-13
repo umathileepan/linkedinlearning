@@ -4,7 +4,7 @@ import static java.lang.System.in;
 import java.util.Scanner;
 
 public class Main {
-    public static double calculateSalary(){
+    /*public static double calculateSalary(){
         int maxHoursPerDay = 40;
         int noOfWeekPerYear = 52;
         System.out.println("Number of hours employee work per week: ");
@@ -17,11 +17,11 @@ public class Main {
         double vacationSalary = salaryPerHour * (numberOfVacation * maxHoursPerDay);
         double totalSalary = ((workingHoursPerWeek * salaryPerHour) * noOfWeekPerYear) - vacationSalary;
         return totalSalary;
-    }
+    }*/
     public static void main(String[] args) {
 
-        double salary = calculateSalary();
-        System.out.println("Employee's yearly salary: " + salary);
+        /*double salary = calculateSalary();
+        System.out.println("Employee's yearly salary: " + salary);*/
 
         /*System.out.println("Hello World from the IntelliJ IDE!");
 
