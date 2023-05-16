@@ -8,8 +8,8 @@ public class Main {
         static Character[] charArray = {'h','e','l','l','o'};
         static Integer[] intArray = {1,2,3,4,5};
         static Boolean[] boolArray = {true,false,true};
-        public static List arrayToList(Objects[] array, List<Object> list){
-            for(Object object: array){
+        public static <T> List<T> arrayToList(T[] array, List<T> list){
+            for(T object: array){
                 list.add(object);
             }
             return list;
