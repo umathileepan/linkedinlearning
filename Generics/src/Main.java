@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Objects;
 
@@ -15,7 +16,32 @@ public class Main {
             return list;
         }
 
+    private static void printShoppingList(String... items){
+        System.out.println("SHOPPING LIST");
+        for(int i = 0; i < items.length; i++) {
+            System.out.println(i + 1  + ". " + items[i]);
+        }
+        System.out.println();
+    }
     public static void main(String[] args) {
+
+        //Linked List Example
+        LinkedList<String> myList = new LinkedList<>();
+        myList.add("Cat");
+        myList.add("Dog");
+        myList.add(1,"Pig");
+        System.out.println(myList);
+        myList.remove("Dog");
+        System.out.println(myList);
+
+        //Varargs Practise
+        String item1 = "Apple";
+        String item2 = "Banana";
+        String item3 = "Pears";
+        String[] shopping = {"Bread","Milk","Butter","Eggs"};
+        printShoppingList("Bread","Milk","Butter","Eggs","No need to create an array to pass","You can pass directly","Varargs can handle no item, one item or many items");
+        Varargs.printShoppingList(item1,item2);
+        Varargs.printShoppingList(shopping);
         //Without Generics: every element needed to be cast.
         List names = new ArrayList<>();
         names.add("Uma");
