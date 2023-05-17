@@ -1,7 +1,7 @@
 public class Customer {
 
-    private boolean hasBeenServed;
-    private String name;
+    public boolean hasBeenServed;
+    public String name;
 
     public Customer(String name){
         hasBeenServed = false;
