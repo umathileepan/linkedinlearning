@@ -6,6 +6,7 @@ import java.util.Objects;
 // Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
 // then press Enter. You can now see whitespace characters in your code.
 public class Main {
+
         static Character[] charArray = {'h','e','l','l','o'};
         static Integer[] intArray = {1,2,3,4,5};
         static Boolean[] boolArray = {true,false,true};
@@ -24,6 +25,23 @@ public class Main {
         System.out.println();
     }
     public static void main(String[] args) {
+        //implementing abstract method of functional interface
+        GreetingMessage gm = new GreetingMessage() {
+            @Override
+            public void greet(String name) {
+                System.out.println("Hello" + name);
+                System.out.println();
+            }
+        };
+
+        //Implementing Lambda
+        GreetingMessage gm2 = (name) -> {
+            System.out.println("Hello " + name);
+            System.out.println();
+        };
+
+        gm.greet(" Uma");
+        gm2.greet("Lambda");
 
         //Linked List Example
         LinkedList<String> myList = new LinkedList<>();
