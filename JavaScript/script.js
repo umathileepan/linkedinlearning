@@ -1,20 +1,13 @@
-const cupboard = {
-    name: "Cupboard",
-    size: "Medium",
-    changeSize: function(size){
-        this.size = size;
-    },
-    color: "White",
-    changeColor: function(color){
-        this.color = color;
-    },
-    noOfSelf: 4,
-    dish: {
-        isCookable: true,
-        dishSize: "medium"
-    }
-};
+import Book from "./Book.js";
 
-console.log("cupboard details: ",cupboard);
-console.log("Colour of the cupboard: ", cupboard.color);
-console.log("Change the colour to blue: ", cupboard.changeColor("blue"));
+const book = new Book(
+    "Healthy Life Style",
+    "Victoria Jone",
+    200,
+    15.00,
+    "16/09/1990"
+);
+
+console.log("book details: ",book);
+console.log("Colour of the : ", book.changeBookCover("green","Tree"));
+console.log("after the change of book cover: ", book);
