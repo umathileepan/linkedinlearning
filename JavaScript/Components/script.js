@@ -27,6 +27,7 @@ const backpackList = backpackObjectArray.map((item) =>
         <li>${backpack.lidOpen}</li>
      
     </ul>
+    <button class = "lid-toggle">Open lid</button>
 `;
 
 return listItem;

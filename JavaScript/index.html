@@ -10,7 +10,18 @@
     <script type="module" src="Backpack.js"></script>
 </head>
 <body>
-    <h1>Java Script : Learning from Linkedin Challange</h1>
+    <h1 id="demo">Java Script : Learning from Linkedin Challange</h1>
+    <button id="outside">Click Me!</button>
 </body>
+<script>
+    const el = document.getElementById("outside");
+el.addEventListener(
+  "click",
+  function () {
+    document.getElementById("demo").innerHTML="You got clicked"
+  },
+  false
+);
+</script>
 
 </html>
