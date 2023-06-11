@@ -5,7 +5,7 @@
     width: 400px;
     height:300px;
     margin: 200px 300px;
-    
+    justify-content: center;
 }
 
 .cta-button{
@@ -18,4 +18,7 @@
 }
 .posY{
     padding: 10px;
+}
+.span{
+    display: inline;
 }

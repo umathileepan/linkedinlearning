@@ -12,6 +12,7 @@ const everydayPack = new Backpack(
     false
 );
 
+
 const backpackList = backpackObjectArray.map((item) =>
 {
     let listItem = document.createElement("article");
