@@ -1,13 +1,12 @@
 
-const container = document.querySelector("container");
-const button = document.querySelector("ct-button");
+const container = document.getElementById("container");
+const button = document.querySelector(".ct-button");
 const posX = document.querySelector(".posX");
-const posY = document.querySelector("posY");
-console.log(container);
+const posY = document.querySelector(".posY");
 
-button.addEventListener("click", function () {
-    console.log("Thank you!")
-    },false);
+button.addEventListener("click", () => {
+    button.style.backgroundColor="blue";
+     },false);
 
     
 const positionChange = ((event) => {
