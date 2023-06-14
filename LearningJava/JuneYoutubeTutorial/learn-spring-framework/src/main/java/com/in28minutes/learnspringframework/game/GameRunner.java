@@ -1,9 +1,5 @@
 package com.in28minutes.learnspringframework.game;
 
-import com.in28minutes.learnspringframework.GamingConsole;
-
-import java.sql.SQLOutput;
-
 public class GameRunner {
     private GamingConsole game;
     public GameRunner(GamingConsole game){
