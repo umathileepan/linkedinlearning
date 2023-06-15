@@ -12,10 +12,5 @@ public class App03GamingBasicJava {
         context.getBean(GamingConsole.class).up();
         context.getBean(GameRunner.class).run();
 
-        //var game = new MarioGame();
-        //var game = new SuperContraGame();
-        //var game = new PackmanGame();
-        //var gameRunner = new GameRunner(game);
-       // gameRunner.run();
     }
 }
