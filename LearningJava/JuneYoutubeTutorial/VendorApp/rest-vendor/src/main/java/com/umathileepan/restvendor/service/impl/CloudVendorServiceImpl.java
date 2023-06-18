@@ -1,5 +1,6 @@
 package com.umathileepan.restvendor.service.impl;
 
+import com.umathileepan.restvendor.exception.CloudVendorNotException;
 import com.umathileepan.restvendor.model.CloudVendor;
 import com.umathileepan.restvendor.repositary.CloudVendorRepository;
 import com.umathileepan.restvendor.service.CloudVendorService;
@@ -37,6 +38,9 @@ public class CloudVendorServiceImpl implements CloudVendorService{
 
     @Override
     public CloudVendor getCloudVendor(String cloudVendorId) {
+        //More Business logic
+        if(cloudVendorRepository.findById(cloudVendorId).isEmpty())
+            throw new CloudVendorNotException("Requested Cloud Vendor does not exist");
         return cloudVendorRepository.findById(cloudVendorId).get();
     }
 
