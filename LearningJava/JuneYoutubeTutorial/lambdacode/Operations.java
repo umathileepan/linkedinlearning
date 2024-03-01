@@ -22,27 +22,28 @@ public class Operations {
                     switch (n){
                         case 1:
                             int add = num1 + num2;
-                            System.out.println(add);
+                            System.out.println("Result " + add);
                             break;
                         case 2:
                             int sub = num1 - num2;
-                            System.out.println(sub);
+                            System.out.println("Result " + sub);
                             break;
                         case 3:
                             int multi = num1 * num2;
-                            System.out.println(multi);
+                            System.out.println("Result " + multi);
                             break;
                         case 4:
                             int div = num1 / num2;
-                            System.out.println(div);
+                            System.out.println("Result " + div);
                             break;
                         case 5:
                             int mod = num1  % num2;
-                            System.out.println(mod);
+                            System.out.println("Result " + mod);
                             break;
                         case 6:
                             System.exit(0);
-
+                        default:
+                            System.out.println("Options is not available. Please check your choice");
                     }
                 }
             }
