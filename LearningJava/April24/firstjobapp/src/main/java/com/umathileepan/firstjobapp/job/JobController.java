@@ -10,17 +10,23 @@ import java.util.List;
 
 @RestController
 public class JobController {
-    private List<Job> jobs = new ArrayList<>();
+    private JobService jobService;
+
+    //Loosely coupling : create interface then add service annotation in service implement then add constructor to initialize
+    public JobController(JobService jobService) {
+        this.jobService = jobService;
+    }
 
     @GetMapping("/jobs")
     //Get all jobs
     public List<Job> findAll(){
-        return jobs;
+
+        return jobService.findAll();
     }
 
     @PostMapping("/jobs")
-    public String crateJob(@RequestBody Job job){
-        jobs.add(job);
+    public String createJob(@RequestBody Job job){
+        jobService.createJob(job);
         return "Job added successfully";
     }
 
