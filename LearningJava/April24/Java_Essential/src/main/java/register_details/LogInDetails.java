@@ -13,7 +13,7 @@ public class LogInDetails {
         do {
             System.out.println("Please enter your new password: ");
             var newPassword = scanner.nextLine();
-            valid = changePassword(proposedPassword());
+            valid = changePassword(newPassword);
         } while (!valid);
 
         System.out.println("The proposed password is valid");
@@ -21,10 +21,12 @@ public class LogInDetails {
         scanner.close();
     }
 
-    private static String proposedPassword() {
-    }
-
     private static void printPasswordRules() {
+        System.out.println("Password must be 8 or more character");
+        System.out.println("It cannot be user name");
+        System.out.println("It cannot be old password");
+        System.out.println("It has to have at least a capital letter");
+        System.out.println("It has to have a special character");
     }
 
     public static boolean changePassword(String newPassword) {
@@ -35,16 +37,19 @@ public class LogInDetails {
             errorMessage += "\n Password must be at least 8 characters long.";
         }
 
+        if(newPassword.matches("[a-zA-Z0-9]*")){
+            valid = false;
+            errorMessage += "\n must include a special char";
+        }
+
         if (newPassword.equals(password)) {
             valid = false;
             errorMessage += "\n It cannot be the same as old password.";
         }
 
-        if (newPassword.equals(username)) {
-            System.out.println("Does not contain the username");
-
-        } else {
-            System.out.println("You have created your password successfully");
+        if (newPassword.toUpperCase().contains(username.toUpperCase())) {
+            valid = false;
+            errorMessage += "\n Cannot contain the username";
 
         }
 
